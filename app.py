@@ -76,7 +76,7 @@ def get_stats():
 def load_blogs_from_json():
     """Load blogs from the exported JSON file"""
     # Primary file to look for (your actual local file)
-    json_file = '
+    json_file = 'fantasy_blogs_export_20250731_001535.json'
 
 # Load blogs when the module is imported
 load_blogs_from_json()
