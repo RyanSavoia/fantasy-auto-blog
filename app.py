@@ -76,28 +76,7 @@ def get_stats():
 def load_blogs_from_json():
     """Load blogs from the exported JSON file"""
     # Primary file to look for (your actual local file)
-    json_file = 'fantasy_blogs_export_20250731_001535.json'
-    
-    if os.path.exists(json_file):
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            
-            # Convert to our format
-            for blog in data.get('blogs', []):
-                player_name = blog.get('player_name')
-                if player_name:
-                    BLOGS_DATA[player_name] = blog
-            
-            print(f"✅ Loaded {len(BLOGS_DATA)} blogs from {json_file}")
-            return True
-        except Exception as e:
-            print(f"❌ Error loading {json_file}: {e}")
-    else:
-        print(f"❌ File not found: {json_file}")
-        print(f"Available files: {os.listdir('.')}")
-    
-    return False
+    json_file = '
 
 # Load blogs when the module is imported
 load_blogs_from_json()
